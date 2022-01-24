@@ -100,7 +100,7 @@ public void testDatabase() throws Exception {
     String selectQuery = "select * from " + database.getTableName(path1);
     ResultSet resultSet = statement.executeQuery(selectQuery);
     printResultSet(database, path1, resultSet);
-select count("LEEDSystemVersionDisplayName") from new_table where state="VA"
+
     String selectQuery2 = "select * from " + database.getTableName(path2);
     ResultSet resultSet2 = statement.executeQuery(selectQuery2);
     printResultSet(database, path2, resultSet2);
@@ -179,7 +179,7 @@ select count("LEEDSystemVersionDisplayName") from new_table where state="VA"
             + "." + database.getColumnNames(path2).get(12) + "where" + database.getColumnNames(path1).get(5) +"."+ database.getColumnNames(path2).get(5)+"IN ('VA')"
             +"." + database.getColumnNames(path2).get(12)+"IN('YES')";
     ResultSet resultSet5 = statement.executeQuery(selectQuery3);
-   elect sum("GrossSqFoot") as total_gross_sq_feet from new_table where state="VA" and IsCertified="Yes"
+  
     String csvFilePath3 = "3.csv";
     BufferedWriter fileWriter = new BufferedWriter(new FileWriter(csvFilePath));
     while (resultSet5.next()) {
