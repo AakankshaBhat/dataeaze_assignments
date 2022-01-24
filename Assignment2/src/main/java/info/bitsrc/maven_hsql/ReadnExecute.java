@@ -11,7 +11,7 @@ import java.util.List;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.Scanner;
+import java.util.*;
 
 import org.apache.avro.Schema;
 import org.apache.avro.generic.GenericRecord;
@@ -21,6 +21,12 @@ import org.apache.parquet.avro.AvroParquetWriter;
 import org.apache.parquet.hadoop.ParquetReader;
 import org.apache.hadoop.fs.Path;
 import org.apache.parquet.hadoop.ParquetWriter;
+
+ProcessBuilder processBuilder = new ProcessBuilder();
+
+// Run a shell command
+processBuilder.command("bash", "-c", "mkdir -p /tmp/output_2/");
+Process process = processBuilder.start();
 
 //Read CSV file
 public class ReadFromCSV {
