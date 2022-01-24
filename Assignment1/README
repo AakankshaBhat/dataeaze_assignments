@@ -1,1 +1,17 @@
+#Spark Coding Assignment
+The files 'bash_script.sh' and 'Assgn_1_pyspark.ipynb' includes creation of directory,subdirectories and execution of queries using SPARKSQL,respectively.
+
+#Configuration
+Download and install Apache Spark on Windows
+Download Jupyter notebook
+Import modules like pandas,pyspark 
+
+
+#Execution
+a) Read csv files using method 'spark.read.csv'
+b) Read parquet file using method 'spark.read.parquet'
+c) Convert parquet file to csv and merge both csv files by using load method
+d) Create a temporary view for purpose of retreiving records
+e) Using Spark SQL required query output is pushed into csv file in respective subdirectories of  '/tmp/output/' directory
+f) The result is fetched in separate dataframes naely df1,df2,df3,df4,df5 
 
