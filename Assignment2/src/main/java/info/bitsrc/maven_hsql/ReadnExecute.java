@@ -118,20 +118,8 @@ public void testDatabase() throws Exception {
             + "." + database.getColumnNames(path2).get(8) + "where" + database.getColumnNames(path2).get(5) +"."+ database.getColumnNames(path2).get(5)+"IN ("VA")";
     ResultSet resultSet3 = statement.executeQuery(selectQuery3);
    
-    String csvFilePath = "1.csv";
-    BufferedWriter fileWriter = new BufferedWriter(new FileWriter(csvFilePath));
-    while (resultSet3.next()) {
-        StringBuilder result = new StringBuilder();
-         
-        result.append(resultSet3.getString(
-                database.getColumnNames(path1).get(5))).append(" ");
-        result.append(resultSet3.getString(
-                database.getColumnNames(path2).get(8))).append(" ");
-    
-        //System.out.println(result.toString());
-        File.WriteAllText(csvFilePath, result.toString());
-    }
-
+   
+    BufferedWriter fileWriter = new BufferedWriter(new FileWriter(csvFilePath))
    
      String selectQuery3 = "select count(*) from " + database.getTableName(path1)
             + " join " + database.getTableName(path2)
@@ -141,7 +129,7 @@ public void testDatabase() throws Exception {
     ResultSet resultSet3 = statement.executeQuery(selectQuery3);
    
    //Number of LEED projects there in Virginia
-    String csvFilePath = "1.csv";
+    String csvFilePath = "/tmp/output_2/1.csv";
     BufferedWriter fileWriter = new BufferedWriter(new FileWriter(csvFilePath));
     while (resultSet3.next()) {
         StringBuilder result = new StringBuilder();
@@ -163,7 +151,7 @@ public void testDatabase() throws Exception {
             + "." + database.getColumnNames(path2).get(13) + "where" + database.getColumnNames(path1).get(5) +"."+ database.getColumnNames(path2).get(5)+"IN ('VA') groupby" +database.getColumnNames(path1).get(13);
     ResultSet resultSet4 = statement.executeQuery(selectQuery4);
    
-    String csvFilePath2 = "2.csv";
+    String csvFilePath2 = "/tmp/output_2/2.csv";
     BufferedWriter fileWriter = new BufferedWriter(new FileWriter(csvFilePath));
     while (resultSet4.next()) {
         StringBuilder result = new StringBuilder();
@@ -186,7 +174,7 @@ public void testDatabase() throws Exception {
             +"." + database.getColumnNames(path2).get(12)+"IN('YES')";
     ResultSet resultSet5 = statement.executeQuery(selectQuery3);
   
-    String csvFilePath3 = "3.csv";
+    String csvFilePath3 = "/tmp/output_2/3.csv";
     BufferedWriter fileWriter = new BufferedWriter(new FileWriter(csvFilePath));
     while (resultSet5.next()) {
         StringBuilder result = new StringBuilder();
