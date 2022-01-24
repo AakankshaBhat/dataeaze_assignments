@@ -12,3 +12,6 @@ b) Run bash script fro creating '/tmp/output_2'
 c) Read CSV and parquet file using method 'CSVReader' and 'AvroParquetReader'
 d) Create a JDBC connection with HSQLDB
 e) using Filewriter method to write query output into csv files in  '/tmp/output_2/' directory
+
+Note:
+Out of 5 problem statement,code completion is done for 3 queries 
