@@ -1,1 +1,14 @@
+#Java Coding Assignment
+The main file is present in path 'Assignment2/src/main/java/info/bitsrc/maven_hsql/ReadnExecute.java'.
 
+#Configuration
+Download Maven 
+Import modules required for reading csv files,making JDBC connection and writing data to HSQLDB 
+
+
+#Execution
+a) Import required libraries and modules for reading .writing files and making JDBC connection.
+b) Run bash script fro creating '/tmp/output_2'
+c) Read CSV and parquet file using method 'CSVReader' and 'AvroParquetReader'
+d) Create a JDBC connection with HSQLDB
+e) using Filewriter method to write query output into csv files in  '/tmp/output_2/' directory
